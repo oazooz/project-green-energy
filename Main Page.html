@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الطاقة الخضراء في حياتنا</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+   <script src="JavascriptForTime.js"></script>
+    <style>
+        .main {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #2E86C1;
+            text-align: center;
+        }
+
+        h2 {
+            color: #D35400;
+        }
+
+    
+
+        a.link1 {
+            color: #C0392B;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        a.link1:hover {
+            color: #922B21;
+        }
+
+        section {
+            background-color: #E8F8F5;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 10%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="logo.png" alt="log" width="400px">
+        </div>
+        <div id="datetime" style="text-align: center; font-weight: bold; margin-top: 10px;"></div>
+        <nav>
+            <ul>
+                <li>
+                    <select  class="btn btn-secondary" id="renewableDropdown" onchange="goToPage(this.value)">
+                        <option>مصادر الطاقة الغير متجددة</option>
+                        <option value="Fossil Fuel.html">الوقود الاحفوري</option>
+                        <option value="Points and natural gas.html">النفط و الغاز الطبيعي</option>
+                        <option value="Nuclear energy.html">الطاقة النووية</option>
+                     </select>               
+                </li>
+                <li>
+                    <select  class="btn btn-light" id="renewableDropdown" onchange="goToPage(this.value)">
+                        <option>مصادر الطاقة المتجددة</option>
+                        <option value="Renewable-Energy.html">طاقة المتجددة</option>
+                        <option value="Wind energy.html">طاقة الرياح</option>
+                        <option value="Solar energy.html">الطاقة الشمسية</option>
+                        <option value="Tidal Power.html">طاقة المد و الجزر</option>
+                        <option value="Steam Power Planr.html">الكهرباء البخارية</option>
+                        <option value="Geothermal energy.html">طاقة حرارة باطن الارض</option>
+                    </select>
+                </li>
+                <li>
+                    <select  class="btn btn-success" id="renewableDropdown" onchange="goToPage(this.value)">
+                        <option>الطاقة الخضراء</option>
+                        <option value="About green energy.html">حول الطاقة الخضراء</option>
+                        <option value="More about green energy.html">المزيد عن الطاقة الخضراء</option>
+                         
+                    </select>
+                </li>
+                <li>
+                    <a href="Main Page.html" class="btn btn-success">الصفحةالرئيسية</a>
+                </li>
+                <li>
+                    <a href="login.html"  class="btn btn-success">تسجيل الدخول</a></li>
+            </ul>
+        </nav>
+       
+    </header>
+
+    <div class="container">
+        <!-- Card for Green Energy -->
+        <section id="about-energy" class="my-4" style="background-color: #28B463;">
+            <div class="card">
+                <div class="card-body">
+                    <h1>الطاقة الخضراء</h1>
+                    <img src="tt.webp" class="main img-fluid" width="430" height="300" alt="Example">
+                    <p>
+                        الطاقة هي أحد أهم التحديات الصعبة التي تواجه العالم في الوقت الحاضر بشكل عام،
+                        والدول العربية فقيرة المصادر للطاقة كالمملكة الأردنية الهاشمية بشكل خاص. ومن أهم هذه التحديات
+                        هو مواصلة إنتاج النفط ومشتقاته بكميات تتناسب مع تزايد معدلات الاستهلاك والطلب المتزايد عليه،
+                        بالإضافة إلى تأثيرات الاحتباس الحراري الناتجة عن انبعاثات ثاني أكسيد الكربون.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card for Wind Energy -->
+        <section id="wind-energy" class="my-4"style="background-color: #28B463;">
+            <div class="card">
+                <div class="card-body">
+                    <h1>طاقة الرياح</h1>
+                    <p>
+                        استعملت قديماً دواليب الهواء من أجل طحن الحبوب، وسحب المياه لري المزروعات. في العصر الحديث،
+                        يتم استغلال سرعة الرياح في إنتاج الطاقة الكهربائية عن طريق تدوير توربينات مرتبطة بمولدات
+                        كهربائية.
+                        من أهم عيوب هذه التقنية هو عدم ثبات إنتاج الكهرباء بسبب تغير سرعة الرياح.
+                    </p>
+                    <video style="display: block; margin: auto;" src="wind.mp4" width="430" height="300" autoplay muted loop></video>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card for Solar Energy -->
+        <section id="Solar-Energy" class="my-4"style="background-color: #28B463;">
+            <div class="card">
+                <div class="card-body">
+                    <h1>الطاقة الشمسية</h1>
+                    <p>
+                        تعد الطاقة الشمسية إحدى أهم مصادر الطاقة المتجددة، كما أن استخدامها يقلل التلوث في البيئة.
+                        تُستخدم في تسخين المياه، وتحلية المياه، وتوليد الكهرباء عبر الألواح الضوئية. ومع ذلك،
+                        يواجه استخدامها تحديات، منها التكلفة وكفاءة التخزين.
+                    </p>
+                    <video style="display: block; margin: auto;" src="sun.mp4" width="430" height="300" autoplay muted loop></video>
+                </div>
+            </div>
+        </section>
+
+        <!-- Applications of Solar Energy Card -->
+        <section class="my-4" style="background-color: #28B463;">
+            <div class="card">
+                <div class="card-body">
+                    <h2>تطبيقات الطاقة الشمسية</h2>
+                    <ul>
+                        <li>الحاسبات والألعاب الإلكترونية والساعات</li>
+                        <li>الإنارة وأجهزة الإذاعة المرئية</li>
+                        <li>محطات اتصالات الموجات السنتيمترية</li>
+                        <li>حماية المنشآت المعدنية من التآكل</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenges of Renewable Energy Card -->
+        <section class="my-4" style="background-color: #28B463;">
+            <div class="card">
+                <div class="card-body">
+                    <h2>مشاكل استخدام الطاقة المتجددة</h2>
+                    <p>
+                        من أهم مشاكل الطاقة الشمسية هو تراكم الغبار على الألواح وتقليل كفاءتها. كذلك، تواجه طاقة الرياح
+                        تحديات
+                        مثل التأثير على البيئة، الضجيج، والتكاليف العالية لنقل الطاقة من مناطق إنتاجها إلى مناطق الطلب.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="JavascriptForTime.js">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+        <footer>
+        <p style="text-align: center; color: white; background-color: #28B463; ;">حقوق النشر © 2025 الطاقة الخضراء. جميع الحقوق محفوظة.</p>
+        </footer>
+</body>
+
+</html>

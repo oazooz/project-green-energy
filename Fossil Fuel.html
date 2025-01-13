@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الوقود الأحفوري - Fossil Fuel</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .main {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="logo.png" alt="log" width="400px">
+        </div>
+        <div id="datetime" style="text-align: center; font-weight: bold; margin-top: 10px;"></div>
+        <nav>
+            <ul>
+                <li>
+                    <select  class="btn btn-secondary" id="renewableDropdown" onchange="goToPage(this.value)">
+                        <option>مصادر الطاقة الغير متجددة</option>
+                        <option value="Fossil Fuel.html">الوقود الاحفوري</option>
+                        <option value="Points and natural gas.html">النفط و الغاز الطبيعي</option>
+                        <option value="Nuclear energy.html">الطاقة النووية</option>
+                     </select>               
+                </li>
+                <li>
+                    <select  class="btn btn-light" id="renewableDropdown" onchange="goToPage(this.value)">
+                        <option>مصادر الطاقة المتجددة</option>
+                        <option value="Renewable-Energy.html">طاقة المتجددة</option>
+                        <option value="Wind energy.html">طاقة الرياح</option>
+                        <option value="Solar energy.html">الطاقة الشمسية</option>
+                        <option value="Tidal Power.html">طاقة المد و الجزر</option>
+                        <option value="Steam Power Planr.html">الكهرباء البخارية</option>
+                        <option value="Geothermal energy.html">طاقة حرارة باطن الارض</option>
+                    </select>
+                </li>
+                <li>
+                    <select  class="btn btn-success" id="renewableDropdown" onchange="goToPage(this.value)">
+                        <option>الطاقة الخضراء</option>
+                        <option value="About green energy.html">حول الطاقة الخضراء</option>
+                        <option value="More about green energy.html">المزيد عن الطاقة الخضراء</option>
+                         
+                    </select>
+                </li>
+                <li>
+                    <a href="Main Page.html" class="btn btn-success">الصفحةالرئيسية</a>
+                </li>
+                <li>
+                    <a href="login.html"  class="btn btn-success">تسجيل الدخول</a></li>
+            </ul>
+        </nav>
+       
+    </header>
+    <div class="container mt-5" style="background-color: #28B463;">
+
+        <!-- Fossil Fuel Card -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h1 class="card-title" style="text-align: center;">الوقود الاحفوري - FossilFuel</h1>
+                <p class="card-text">
+                    هو وقود يتم استعماله لإنتاج الأحفورية. ويستخرج الوقود الأحفوري من المواد الأحفورية كالفحم الحجري، الفحم النفطي الأسود، الغاز الطبيعي، ومن البترول. وتستخرج هذه المواد بدورها من باطن الأرض وتحترق في الهواء مع الأكسجين لإنتاج حرارة تُستخدم في كافة الميادين.
+                    يعتمد تركيب الوقود الأحفوري على دورة الكربون في الطبيعة، وبهذا يتم تخزين الطاقة (الشمسية) عبر العصور القديمة ليتم اليوم استخدامها.
+                    قد قامت الثورة الصناعية في القرنين الثامن والتاسع عشر تزامنًا مع استعمال الطاقة الأحفورية في المجال التقني، وخاصة الفحم الحجري في ذاك الوقت. أما في يومنا هذا، فيلعب النفط الخام الدور الأكبر في تلبية احتياجات الطاقة نظرًا لسهولة استخراجه ومعالجته ونقله، مما يجعله أزهد ثمناً.
+                </p>
+                <img src="Fossil Fuel1.jpeg" class="main img-fluid" width="430" height="300" alt="Example">
+            </div>
+        </div>
+
+        <!-- Coal Formation Card -->
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title" style="text-align: center;">تكوين الفحم</h2>
+                <p class="card-text">
+                    تولد الفحم من بقايا النباتات التي انقطع عنها الهواء - مثلًا في المستنقعات – والتي حللتها البكتيريا اللاهوائية وتعرضت لاحقًا لعوامل التعرية ولضغط كبير وحرارة خارجية. أما الماء والشوائب، فقد تطايرت مع الوقت ليكون الخث والفحم بدرجات مختلفة من حيث الخليط والنقاوة والكثافة.
+                    يعتبر الفحم الحجري أكثر أنواع الفحم قيمة وذلك لنقاوته العالية وكثافته الكبيرة، مما يعني أنه يتكون من عنصر الكربون بشكل أساسي. وبهذه المواصفات يمتلك الفحم الحجري قدرة احتراق وسعرات حرارية عالية القيمة.
+                </p>
+                <img src="Fossil Fuel2.jpeg" class="main img-fluid" width="430" height="300" alt="Example">
+            </div>
+        </div>
+        <div class="card" >
+            <div class="card-body text-center">
+                <a href="Main Page.html" class="btn btn-primary">العودة إلى الصفحة الرئيسية</a>
+             </div>
+        </div>
+        
+
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="JavascriptForTime.js">
+    </script>
+    <footer>
+        <p style="text-align: center; color: white;">حقوق النشر © 2025 الطاقة الخضراء. جميع الحقوق محفوظة.</p>
+        </footer>
+</body>
+</html>

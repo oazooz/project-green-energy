@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طاقة المد و الجزر - Tidal Power</title>
+    <!-- Bootstrap CSS --><link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+    
+        h1, h3 {
+            color: #2E86C1;
+        }
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #E8F8F5;
+            border-radius: 10px;
+            max-width: 800px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card-img-top {
+            width: 100%;
+            height: auto;
+        }
+        .link1 {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: #C0392B;
+            text-decoration: none;
+        }
+        .link1:hover {
+            color: #922B21;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <img src="logo.png" alt="log" width="400px">
+        </div>
+        <div id="datetime" style="text-align: center; font-weight: bold; margin-top: 10px;"></div>
+        <nav>
+            <ul>
+                <li>
+                    <select  class="btn btn-secondary" id="renewableDropdown" onchange="goToPage(this.value)">
+                        <option>مصادر الطاقة الغير متجددة</option>
+                        <option value="Fossil Fuel.html">الوقود الاحفوري</option>
+                        <option value="Points and natural gas.html">النفط و الغاز الطبيعي</option>
+                        <option value="Nuclear energy.html">الطاقة النووية</option>
+                     </select>               
+                </li>
+                <li>
+                    <select  class="btn btn-light" id="renewableDropdown" onchange="goToPage(this.value)">
+                        <option>مصادر الطاقة المتجددة</option>
+                        <option value="Renewable-Energy.html">طاقة المتجددة</option>
+                        <option value="Wind energy.html">طاقة الرياح</option>
+                        <option value="Solar energy.html">الطاقة الشمسية</option>
+                        <option value="Tidal Power.html">طاقة المد و الجزر</option>
+                        <option value="Steam Power Planr.html">الكهرباء البخارية</option>
+                        <option value="Geothermal energy.html">طاقة حرارة باطن الارض</option>
+                    </select>
+                </li>
+                <li>
+                    <select  class="btn btn-success" id="renewableDropdown" onchange="goToPage(this.value)">
+                        <option>الطاقة الخضراء</option>
+                        <option value="About green energy.html">حول الطاقة الخضراء</option>
+                        <option value="More about green energy.html">المزيد عن الطاقة الخضراء</option>
+                         
+                    </select>
+                </li>
+                <li>
+                    <a href="Main Page.html" class="btn btn-success">الصفحةالرئيسية</a>
+                </li>
+                <li>
+                    <a href="login.html"  class="btn btn-success">تسجيل الدخول</a></li>
+            </ul>
+        </nav>
+       
+    </header>
+
+    <div class="container mt-5"style="background-color: #28B463;">
+        <!-- Card for Tidal Power Introduction -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h1 class="card-title">طاقة المد و الجزر</h1>
+                <h3 class="card-subtitle mb-2">تعريف ظاهرة المد والجزر</h3>
+                <ul class="card-text">
+                    <li>المد : المد هو الإرتفاع المؤقت التدرجي في منسوب مياه سطح المحيط أو البحر</li>
+                    <li>الجزر: هو إنخفاض مؤقت تدرجي في منسوب مياه سطح المحيط أو البحر.</li>
+                    <li>مدى المد : هو المسافة الرأسية في مستوى الماء بين أقصى مد وأدنى جزر.</li>
+                </ul>
+                <video src="Tidal Power 101.mp4" width="640" height="264" autoplay controls muted class="card-img-top"></video>
+            </div>
+        </div>
+
+        <!-- Card for Causes of Tidal Power -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h3 class="card-title">مسببات ظاهرة المد والجزر</h3>
+                <ul class="card-text">
+                    <li>هناك قوتان أساسيتان مسؤولتان عن حدوث المد والجزر هما:</li>
+                </ul>
+                <ol class="card-text">
+                    <li>• قوة الطرد المركزي للأرض نتيجة لدورانها حول محورها.</li>
+                    <li>• بفعل جاذبية الشمس والقمر لمياه البحار والمحيطات ولأن القمر أقرب إلى الأرض فتأثير جاذبيته تكون أكبر رغم صغر حجمه، لذا فإن جاذبية القمر هي أهم عامل في حدوث الموج والجزر.</li>
+                </ol>
+                <ul class="card-text">
+                    <li>الأرض تدور حول محورها فتتولد قوة طرد وجذب للأشياء على سطحها وبما أن الماء كتلة مرنة فهو يستجيب لتلك القوى ونجد أن عامل الشمس يعمل على تقوية أو إضعاف قوى القمر.</li>
+                    <li>الجدير بالذكر أن كلاً من الشمس والقمر يؤثران في ظاهرة المد والجزر ولكن بنسب مختلفة وليس كما هو معلوم عند البعض أن سبب هذه الظاهرة القمر فقط. حيث تبلغ نسبة تأثير القمر 70% ونسبة تأثير الشمس 30%.</li>
+                </ul>
+                <img src="tidal.jpg" class="card-img-top" alt="Example Image">
+            </div>
+        </div>
+
+        <!-- Link to return to homepage -->
+        <div class="card" >
+            <div class="card-body text-center">
+                <a href="Main Page.html" class="btn btn-primary">العودة إلى الصفحة الرئيسية</a>
+             </div>
+        </div>    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="JavascriptForTime.js">
+    </script>
+    <footer>
+        <p style="text-align: center; color: white;">حقوق النشر © 2025 الطاقة الخضراء. جميع الحقوق محفوظة.</p>
+        </footer>
+
+</body>
+</html>

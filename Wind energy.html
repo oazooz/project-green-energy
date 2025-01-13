@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الطاقة الخضراء في حياتنا</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div>
+            <img src="logo.png" alt="log" width="400px">
+        </div>
+        <div id="datetime" style="text-align: center; font-weight: bold; margin-top: 10px;"></div>
+        <nav>
+            <ul>
+                <li>
+                    <select  class="btn btn-secondary" id="renewableDropdown" onchange="goToPage(this.value)">
+                        <option>مصادر الطاقة الغير متجددة</option>
+                        <option value="Fossil Fuel.html">الوقود الاحفوري</option>
+                        <option value="Points and natural gas.html">النفط و الغاز الطبيعي</option>
+                        <option value="Nuclear energy.html">الطاقة النووية</option>
+                     </select>               
+                </li>
+                <li>
+                    <select  class="btn btn-light" id="renewableDropdown" onchange="goToPage(this.value)">
+                        <option>مصادر الطاقة المتجددة</option>
+                        <option value="Renewable-Energy.html">طاقة المتجددة</option>
+                        <option value="Wind energy.html">طاقة الرياح</option>
+                        <option value="Solar energy.html">الطاقة الشمسية</option>
+                        <option value="Tidal Power.html">طاقة المد و الجزر</option>
+                        <option value="Steam Power Planr.html">الكهرباء البخارية</option>
+                        <option value="Geothermal energy.html">طاقة حرارة باطن الارض</option>
+                    </select>
+                </li>
+                <li>
+                    <select  class="btn btn-success" id="renewableDropdown" onchange="goToPage(this.value)">
+                        <option>الطاقة الخضراء</option>
+                        <option value="About green energy.html">حول الطاقة الخضراء</option>
+                        <option value="More about green energy.html">المزيد عن الطاقة الخضراء</option>
+                         
+                    </select>
+                </li>
+                <li>
+                    <a href="Main Page.html" class="btn btn-success">الصفحةالرئيسية</a>
+                </li>
+                <li>
+                    <a href="login.html"  class="btn btn-success">تسجيل الدخول</a></li>
+            </ul>
+        </nav>
+       
+    </header>
+
+    <!-- Wind Energy Section with Bootstrap Cards -->
+    <section id="wind-energy" class="section-box" style="background-color: #28B463;">
+        <div class="container">
+            <!-- Card for Wind Energy Description -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h1 class="card-title">طاقة الرياح</h1>
+                    <p class="card-text">
+                        استُخدمت الرياح قديمًا لتشغيل دواليب الهواء في طحن الحبوب وسحب المياه لري المزروعات. 
+                        أما في العصر الحديث، فيتم استغلال سرعة الرياح لإنتاج الطاقة الكهربائية عبر تدوير توربينات متصلة بمولدات كهربائية.
+                        رغم الفوائد الكبيرة لهذه التقنية، إلا أن أحد أبرز تحدياتها هو عدم ثبات إنتاج الكهرباء بسبب تغيّر سرعة الرياح.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <img src="wind1.jpg" width="430" height="300" alt="توربينات الرياح" class="img-fluid">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <img src="wind2.jpg" width="430" height="300" alt="توربينات الرياح" class="img-fluid">
+                        </div>
+                    </div>
+                    <a href="Main Page.html" class="btn btn-primary">العودة للصفحة الرئيسية</a>
+                </div>
+            </div>
+
+            <!-- Card for Wind Electricity Calculator -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">آلة حساب طاقة الرياح</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label for="radius" class="form-label">نصف قطر الشفرة (بالمتر):</label>
+                            <input type="number" class="form-control" id="radius" step="0.01">
+                            <span id="radiusError" class="error"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="windSpeed" class="form-label">سرعة الرياح (بالمتر/الثانية):</label>
+                            <input type="number" class="form-control" id="windSpeed" step="0.01">
+                            <span id="speedError" class="error"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="efficiency" class="form-label">كفاءة التوربين (0 - 1):</label>
+                            <input type="number" class="form-control" id="efficiency" step="0.01">
+                            <span id="efficiencyError" class="error"></span>
+                        </div>
+                        <button type="button" class="btn btn-success" onclick="calculatePower()">حساب الطاقة</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Card for Calculation Report -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title">تقرير الحساب:</h3>
+                    <textarea id="report" class="form-control" rows="10" readonly></textarea>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        function calculatePower() {
+            const radius = parseFloat(document.getElementById('radius').value);
+            const windSpeed = parseFloat(document.getElementById('windSpeed').value);
+            const efficiency = parseFloat(document.getElementById('efficiency').value);
+            const airDensity = 1.225; // kg/m^3
+            
+            let hasError = false;
+
+            // Clear previous errors
+            document.getElementById('radiusError').textContent = "";
+            document.getElementById('speedError').textContent = "";
+            document.getElementById('efficiencyError').textContent = "";
+
+            // Validation
+            if (radius <= 0 || isNaN(radius)) {
+                document.getElementById('radiusError').textContent = " من فضلك أدخل نصف قطر صالح!";
+                hasError = true;
+            }
+            if (windSpeed <= 0 || isNaN(windSpeed)) {
+                document.getElementById('speedError').textContent = " من فضلك أدخل سرعة الرياح صالحه!";
+                hasError = true;
+            }
+            if (efficiency <= 0 || efficiency > 1 || isNaN(efficiency)) {
+                document.getElementById('efficiencyError').textContent = " من فضلك أدخل كفاءة صحيحة بين 0 و 1!";
+                hasError = true;
+            }
+            
+            if (hasError) return;
+            
+            // Calculations
+            const sweptArea = Math.PI * Math.pow(radius, 2);  // A = πr²
+            const power = 0.5 * airDensity * sweptArea * Math.pow(windSpeed, 3) * efficiency;
+            
+            // Report
+            const report = `تقرير حساب طاقة الرياح:\n\n` +
+                `نصف قطر الشفرة: ${radius} متر\n` +
+                `سرعة الرياح: ${windSpeed} متر/الثانية\n` +
+                `الكفاءة: ${efficiency}\n` +
+                `كثافة الهواء: ${airDensity} كجم/م³\n` +
+                `مساحة التوربين: ${sweptArea.toFixed(2)} م²\n\n` +
+                `الطاقة المتولدة: ${power.toFixed(2)} وات`;
+            
+            document.getElementById('report').value = report;
+        }
+    </script>
+     <script src="JavascriptForTime.js">
+    </script>
+    <footer>
+        <p style="text-align: center; color: white;">حقوق النشر © 2025 الطاقة الخضراء. جميع الحقوق محفوظة.</p>
+        </footer>
+</body>
+</html>

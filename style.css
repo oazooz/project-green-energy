@@ -1,0 +1,128 @@
+/* إعدادات عامة */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* رأس الصفحة */
+header {
+    background-color: #28B463;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+header {
+    background-color: white;
+    color: #58C735;
+}
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header nav ul li a.cta {
+    font-weight: bold;
+    border: 2px solid white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header nav ul li a.cta:hover {
+    background-color: white;
+    color: #28B463;
+}
+
+/* الأقسام */
+section {
+    background-color: #E8F8F5;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h1 {
+    color: #2E86C1;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+section h2 {
+    color: #D35400;
+    margin-bottom: 10px;
+}
+
+section p, section ul {
+    color: #212F3C;
+}
+
+section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    line-height: 1.8;
+}
+
+/* الروابط */
+a {
+    color: #C0392B;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #922B21;
+    text-decoration: underline;
+}
+
+/* الصور */
+.responsive-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* تذييل الصفحة */
+footer {
+    background-color: #28B463;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

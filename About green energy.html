@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حول الطاقة الخضراء</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div>
+            <img src="logo.png" alt="log" width="400px">
+        </div>
+        <div id="datetime" style="text-align: center; font-weight: bold; margin-top: 10px;"></div>
+        <nav>
+            <ul>
+                <li>
+                    <select  class="btn btn-secondary" id="renewableDropdown" onchange="goToPage(this.value)">
+                        <option>مصادر الطاقة الغير متجددة</option>
+                        <option value="Fossil Fuel.html">الوقود الاحفوري</option>
+                        <option value="Points and natural gas.html">النفط و الغاز الطبيعي</option>
+                        <option value="Nuclear energy.html">الطاقة النووية</option>
+                     </select>               
+                </li>
+                <li>
+                    <select  class="btn btn-light" id="renewableDropdown" onchange="goToPage(this.value)">
+                        <option>مصادر الطاقة المتجددة</option>
+                        <option value="Renewable-Energy.html">طاقة المتجددة</option>
+                        <option value="Wind energy.html">طاقة الرياح</option>
+                        <option value="Solar energy.html">الطاقة الشمسية</option>
+                        <option value="Tidal Power.html">طاقة المد و الجزر</option>
+                        <option value="Steam Power Planr.html">الكهرباء البخارية</option>
+                        <option value="Geothermal energy.html">طاقة حرارة باطن الارض</option>
+                    </select>
+                </li>
+                <li>
+                    <select  class="btn btn-success" id="renewableDropdown" onchange="goToPage(this.value)">
+                        <option>الطاقة الخضراء</option>
+                        <option value="About green energy.html">حول الطاقة الخضراء</option>
+                        <option value="More about green energy.html">المزيد عن الطاقة الخضراء</option>
+                         
+                    </select>
+                </li>
+                <li>
+                    <a href="Main Page.html" class="btn btn-success">الصفحةالرئيسية</a>
+                </li>
+                <li>
+                    <a href="login.html"  class="btn btn-success">تسجيل الدخول</a></li>
+            </ul>
+        </nav>
+       
+    </header>
+    <!-- Content Section with Bootstrap Cards -->
+    <div class="container"style="background-color: #28B463;">
+        <!-- About Green Energy Card -->
+        <div class="card mb-4" >
+            <div class="card-body">
+                <h1 class="card-title">حول الطاقة الخضراء</h1>
+                <p class="card-text">
+                    الطاقة الخضراء هي الطاقة المتجددة التي تنتج من مصادر طبيعية ومستدامة. من أهم مصادرها: طاقة الرياح، الطاقة الشمسية، الطاقة الحرارية الأرضية، والطاقة المائية. هذه الأنواع من الطاقة لا تسبب تلوثًا بيئيًا وهي آمنة للاستخدام على المدى الطويل.
+                </p>
+            </div>
+        </div>
+
+        <!-- Importance of Green Energy Card -->
+        <div class="card mb-4" >
+            <div class="card-body">
+                <h2 class="card-title">أهمية الطاقة الخضراء:</h2>
+                <p class="card-text">
+                    في عصرنا الحالي، تزايدت الحاجة إلى إيجاد بدائل للطاقة التقليدية مثل الفحم والنفط، التي تسبب تلوثًا بيئيًا. الطاقة الخضراء تقدم الحلول اللازمة لتحقيق استدامة بيئية واقتصادية، وتساعد في تقليل انبعاثات الغازات الدفيئة مثل ثاني أكسيد الكربون.
+                </p>
+            </div>
+        </div>
+
+        <!-- Challenges Facing Green Energy Card -->
+        <div class="card mb-4" >
+            <div class="card-body">
+                <h2 class="card-title">التحديات التي تواجه الطاقة الخضراء:</h2>
+                <ul class="card-text">
+                    <li>التكاليف الأولية المرتفعة لتنفيذ تقنيات الطاقة الخضراء.</li>
+                    <li>الحاجة إلى بنية تحتية متطورة لدعم استخدامها.</li>
+                    <li>اعتماد بعض مصادر الطاقة الخضراء على الظروف الطبيعية مثل الرياح والشمس.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Back to Homepage Link -->
+        <div class="card" >
+            <div class="card-body text-center">
+                <a href="Main Page.html" class="btn btn-primary">العودة إلى الصفحة الرئيسية</a>
+             </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="JavascriptForTime.js">
+    </script>
+     <script src="JavascriptForTime.js">
+    </script>
+    <footer>
+        <p style="text-align: center; color: white; background-color: #28B463; ;">حقوق النشر © 2025 الطاقة الخضراء. جميع الحقوق محفوظة.</p>
+    </footer>
+</body>
+</html>
